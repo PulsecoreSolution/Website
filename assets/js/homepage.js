@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const section1 = document.getElementById('section1');
     const section6 = document.getElementById('section6');
     const links = document.querySelectorAll('nav a[href^="#"]');
+    const mobileMenu = document.getElementById('mobileMenu');
 
     // Toggle mobile nav
-    if (toggleButton && navUl) {
+    if (toggleButton && mobileMenu) {
         toggleButton.addEventListener('click', () => {
-            navUl.classList.toggle('show');
+            mobileMenu.classList.toggle('show');
         });
     }
 
@@ -58,130 +59,37 @@ document.addEventListener('DOMContentLoaded', () => {
         loopingTextInner.innerHTML = spanGroup + spanGroup;
     }
 
-    const clientItems = [
-        'MDEC', 'UiTM', 'UM', 'JAKIM', 'UTM', 'FTSM UKM', 'KPT', 'JPA'
-    ];
+    // Scroll
+    const scrollContainer = document.getElementById('scrollContainer');
+    const scrollLeftBtn = document.getElementById('scrollLeft');
+    const scrollRightBtn = document.getElementById('scrollRight');
 
-    const clientLogos = document.getElementById('clientLogos');
+    if (scrollLeftBtn && scrollRightBtn && scrollContainer) {
+        scrollLeftBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+        });
 
-    if (clientLogos) {
-        const looped = clientItems.map(c => `<span>${c}</span>`).join(' ');
-        clientLogos.innerHTML = looped + looped; // duplicate for loop
+        scrollRightBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+        });
     }
+
+    // fade
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // Optional: run only once
+    }
+  });
+}, { threshold: 0.1 });
+
+fadeInElements.forEach(el => observer.observe(el));
 
 });
 
-// // Neon Glow Cursor for Section 6
-// const canvas = document.createElement('canvas');
-// canvas.id = 'neon-cursor';
-// document.getElementById('section6').prepend(canvas);
-
-// const section6 = document.getElementById('section6');
-// const renderer = new THREE.WebGLRenderer({
-//   canvas: canvas,
-//   alpha: true,
-//   antialias: true,
-// });
-// renderer.setSize(section6.clientWidth, section6.clientHeight);
-// renderer.setPixelRatio(window.devicePixelRatio);
-
-// const scene = new THREE.Scene();
-// const camera = new THREE.PerspectiveCamera(75, section6.clientWidth / section6.clientHeight, 0.1, 1000);
-// camera.position.z = 5;
-
-// canvas.style.position = 'absolute';
-// canvas.style.top = 0;
-// canvas.style.left = 0;
-// canvas.style.pointerEvents = 'none';
-// canvas.style.zIndex = 1;
-// section6.style.position = 'relative';
-
-// // Add glow with custom material
-// const trailLength = 30;
-// const glowTrail = [];
-
-// const glowMaterial = new THREE.MeshBasicMaterial({
-//   color: 0x00ffff,
-//   transparent: true,
-//   opacity: 0.7,
-//   blending: THREE.AdditiveBlending,
-// });
-
-// const geometry = new THREE.SphereGeometry(0.05, 16, 16);
-
-// for (let i = 0; i < trailLength; i++) {
-//   const glow = new THREE.Mesh(geometry, glowMaterial.clone());
-//   glow.material.opacity = 1 - i / trailLength;
-//   glow.material.color.setHSL(i / trailLength, 1, 0.5); // rainbow glow
-//   scene.add(glow);
-//   glowTrail.push(glow);
-// }
-
-// const mouse = { x: 0, y: 0 };
-// section6.addEventListener('mousemove', (e) => {
-//   const rect = section6.getBoundingClientRect();
-//   mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-//   mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
-// });
-
-// const vector = new THREE.Vector3();
-// function animate() {
-//   requestAnimationFrame(animate);
-
-//   vector.x += (mouse.x * 2 - vector.x) * 0.2;
-//   vector.y += (mouse.y * 2 - vector.y) * 0.2;
-
-//   glowTrail.forEach((dot, i) => {
-//     const target = i === 0 ? vector : glowTrail[i - 1].position;
-//     dot.position.lerp(target, 0.2);
-//   });
-
-//   renderer.render(scene, camera);
-// }
-
-// animate();
-
-// window.addEventListener('resize', () => {
-//   camera.aspect = section6.clientWidth / section6.clientHeight;
-//   camera.updateProjectionMatrix();
-//   renderer.setSize(section6.clientWidth, section6.clientHeight);
-// });
-
-
-// OPTIONAL: Clone scroll list items for infinite effect
-// const scrollList = document.querySelector(".scroll-list");
-// const items = Array.from(scrollList.children);
-// window.addEventListener("load", () => {
-//     items.forEach((item) => {
-//         const clone = item.cloneNode(true);
-//         clone.setAttribute("aria-hidden", "true");
-//         scrollList.appendChild(clone);
-//     });
-// });
-
-// OPTIONAL: Hide header on scroll down
-// let lastScrollTop = 0;
-// window.addEventListener('scroll', function () {
-//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     if (scrollTop > lastScrollTop) {
-//         header.classList.add('hidden');
-//     } else {
-//         header.classList.remove('hidden');
-//     }
-//     lastScrollTop = scrollTop;
-// });
-
-// OPTIONAL: Custom animated cursor
-// const cursor = document.querySelector('.cursor');
-// document.addEventListener('mousemove', e => {
-//     cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
-// });
-// document.addEventListener('click', e => {
-//     cursor.classList.add("expand");
-//     setTimeout(() => {
-//         cursor.classList.remove("expand");
-//     }, 500);
-// });
 
 
 

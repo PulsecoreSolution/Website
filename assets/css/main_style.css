@@ -216,7 +216,7 @@ section {
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 
 .fade-in.show {

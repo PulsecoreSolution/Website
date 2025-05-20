@@ -30,6 +30,55 @@ body {
 	}
 }
 
+.desktop-header { display: block; }
+.mobile-header { display: none; }
+
+@media (max-width: 767px) {
+  .desktop-header { display: none; }
+  .mobile-header { display: block; }
+
+  /* Example: Stack nav links vertically */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #222;
+    padding: 1rem;
+  }
+
+  /* Example: Make team cards stack vertically */
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Example: Adjust feature grid */
+  .feature-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Example: Contact section columns stack */
+  .contact-left, .contact-right {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 2rem;
+  }
+
+  /* Example: Adjust font sizes */
+  h1, h2, h3 {
+    font-size: 1.5em !important;
+  }
+
+  /* Example: Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 
 header {
     background-color: rgba(39, 28, 46, 0.5); /* Semi-transparent background */

@@ -9,16 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main_style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.ico">
     <title>PulseCore Solution</title>
 </head>
 
 <body>
-
-    <header id="main-header">
+    <!-- Desktop Header -->
+    <header id="main-header" class="desktop-header">
         <nav id="headernav">
             <div style="display: flex; align-items: center;" class="col-sm-4">
                 <a href="#section1" style="display: flex; align-items: center; text-decoration: none; color: white;">
@@ -27,7 +25,7 @@
                 </a>
             </div>
 
-            <ul class="" id="mobile" class="col-sm-6 text-center">
+            <ul class="col-sm-6 text-center">
                 <li><a href="#section6" class="btn btn6">About</a></li>
                 <li><a href="#section2" class="btn btn6">Teams</a></li>
                 <li><a href="#section3" class="btn btn6">Services</a></li>
@@ -38,19 +36,18 @@
         </nav>
     </header>
 
-    <!-- Mobile View -->
-    <header id="mobile-header">
+    <!-- Mobile Header -->
+    <header id="mobile-header" class="mobile-header">
         <nav class="mobile-nav">
             <div class="mobile-nav-top">
                 <a href="#section1" class="brand">
                     <img src="./assets/img/pclogo.png" alt="Pulsecore Logo" width="40" height="40">
-                    <span>PULSECORE SOLUTION.</span>
+                    <span>PULSECORE SOLUTION</span>
                 </a>
                 <i class="toggle-btn" id="toggleButton">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    <!-- Burger Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 12h12v1H2v-1zm0-4h12v1H2V8zm0-4h12v1H2V4z" />
                     </svg>
                 </i>
             </div>
@@ -64,6 +61,7 @@
             </ul>
         </nav>
     </header>
+
 
 
     <main>
@@ -157,7 +155,8 @@
                             <p> Finance Module System Development</p>
                         </div>
                         <div class="socials">
-                            <span><a href="mailto:danial7101@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></span>
+                            <span><a href="mailto:danial7101@gmail.com" target="_blank"><i
+                                        class="bi bi-envelope"></i></a></span>
                             <span><a href="tel:+60 11-5659 0701"><i class="bi bi-telephone"></i></a></span>
                             <span><a href="" target="_blank"><i class="bi bi-linkedin"></i></a></span>
                         </div>
@@ -175,9 +174,11 @@
                             <p> Finance Module System Development</p>
                         </div>
                         <div class="socials">
-                            <span><a href="mailto:Aliasyahira0612@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></span>
+                            <span><a href="mailto:Aliasyahira0612@gmail.com" target="_blank"><i
+                                        class="bi bi-envelope"></i></a></span>
                             <span><a href="tel:+60183558464"><i class="bi bi-telephone"></i></a></span>
-                            <span><a href="https://www.linkedin.com/in/aliasyahira0612" target="_blank"><i class="bi bi-linkedin"></i></a></span>
+                            <span><a href="https://www.linkedin.com/in/aliasyahira0612" target="_blank"><i
+                                        class="bi bi-linkedin"></i></a></span>
                         </div>
                     </div>
 
@@ -193,7 +194,8 @@
                             <p> Finance Module System Development</p>
                         </div>
                         <div class="socials">
-                            <span><a href="mailto:muhdfazri920@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></span>
+                            <span><a href="mailto:muhdfazri920@gmail.com" target="_blank"><i
+                                        class="bi bi-envelope"></i></a></span>
                             <span><a href="tel:+601165240426"><i class="bi bi-telephone"></i></a></span>
                             <span><a href="" target="_blank"><i class="bi bi-linkedin"></i></a></span>
                         </div>
@@ -211,7 +213,8 @@
                             <p> Finance Module System Development</p>
                         </div>
                         <div class="socials">
-                            <span><a href="mailto:syarifm161@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></span>
+                            <span><a href="mailto:syarifm161@gmail.com" target="_blank"><i
+                                        class="bi bi-envelope"></i></a></span>
                             <span><a href="tel:+601157252931"><i class="bi bi-telephone"></i></a></span>
                             <span><a href="" target="_blank"><i class="bi bi-linkedin"></i></a></span>
                         </div>
@@ -222,7 +225,7 @@
 
         <section id="section3">
             <div class="container feature-section text-white" style="width: auto;">
-                <div class="feature-header">
+                <div class="feature-header fade-in">
                     <div>
                         <h2 class="fw-bold">Features that <br><span class="highlight">you'll ever need.</span></h2>
                     </div>
@@ -278,7 +281,7 @@
                 <p class="clients-subtitle fade-in">CLIENTS</p>
                 <h2 class="clients-title fade-in">We Work With Amazing Clients</h2>
 
-                <div class="scroll-wrapper">
+                <div class="scroll-wrapper fade-in">
                     <button class="scroll-arrow left" id="scrollLeft"><i class="bi bi-chevron-left"></i></button>
 
                     <div class="scroll-container" id="scrollContainer">
@@ -324,8 +327,8 @@
 
                 <!-- Right Column: Contact Info -->
                 <div class="col-md-6 contact-right">
-                    <p class="blinking-text">Got Any Question</p>
-                    <p class="intro">Get in touch to discuss your employee wellbeing needs today.<br>
+                    <p class="blinking-text fade-in">Got Any Question</p>
+                    <p class="intro fade-in">Get in touch to discuss your employee wellbeing needs today.<br>
                         Please give us a call, drop us an email.
                     </p>
 

@@ -16,7 +16,7 @@
 
 <body>
     <!-- Desktop Header -->
-    <header id="main-header" class="desktop-header">
+    <header id="main-header">
         <nav id="headernav">
             <div style="display: flex; align-items: center;" class="col-sm-4">
                 <a href="#section1" style="display: flex; align-items: center; text-decoration: none; color: white;">
@@ -25,7 +25,7 @@
                 </a>
             </div>
 
-            <ul class="col-sm-6 text-center">
+            <ul class="" id="mobile" class="col-sm-6 text-center">
                 <li><a href="#section6" class="btn btn6">About</a></li>
                 <li><a href="#section2" class="btn btn6">Teams</a></li>
                 <li><a href="#section3" class="btn btn6">Services</a></li>
@@ -36,18 +36,19 @@
         </nav>
     </header>
 
-    <!-- Mobile Header -->
-    <header id="mobile-header" class="mobile-header">
+    <!-- Mobile View -->
+    <header id="mobile-header">
         <nav class="mobile-nav">
             <div class="mobile-nav-top">
                 <a href="#section1" class="brand">
                     <img src="./assets/img/pclogo.png" alt="Pulsecore Logo" width="40" height="40">
-                    <span>PULSECORE SOLUTION</span>
+                    <span>PULSECORE SOLUTION.</span>
                 </a>
                 <i class="toggle-btn" id="toggleButton">
-                    <!-- Burger Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2 12h12v1H2v-1zm0-4h12v1H2V8zm0-4h12v1H2V4z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                     </svg>
                 </i>
             </div>
@@ -62,8 +63,32 @@
         </nav>
     </header>
 
-
-
+    <!-- Mobile View -->
+    <header id="mobile-header">
+        <nav class="mobile-nav">
+            <div class="mobile-nav-top">
+                <a href="#section1" class="brand">
+                    <img src="./assets/img/pclogo.png" alt="Pulsecore Logo" width="40" height="40">
+                    <span>PULSECORE SOLUTION.</span>
+                </a>
+                <i class="toggle-btn" id="toggleButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </i>
+            </div>
+            <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="#section6">About</a></li>
+                <li><a href="#section2">Teams</a></li>
+                <li><a href="#section3">Services</a></li>
+                <li><a href="#section7">Client</a></li>
+                <li><a href="#section4">Product</a></li>
+                <li><a href="#section5">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section id="section1">
             <div class="hero-content">
@@ -144,7 +169,7 @@
             <div class="team-section">
                 <div class="team-grid">
                     <div class="card fade-in">
-                        <p class="role">Lead Development</p>
+                        <p class="role">Lead Developer</p>
                         <img src="./assets/img/danial raya.jpg" alt="Azunyan" class="avatar">
                         <h4>Muhammad Danial Bin Zainal Azlan</h4>
                         <div class="proj">

@@ -224,6 +224,27 @@ section {
   transform: translateY(0);
 }
 
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
 /* Section Transitions */
 
 /* section {

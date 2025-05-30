@@ -77,19 +77,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // fade
     const fadeInElements = document.querySelectorAll('.fade-in');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target); // Optional: run only once
-    }
-  });
-}, { threshold: 0.1 });
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // Optional: run only once
+            }
+        });
+    }, { threshold: 0.1 });
 
-fadeInElements.forEach(el => observer.observe(el));
+    fadeInElements.forEach(el => observer.observe(el));
 
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+    const scrollContainer = document.getElementById('scrollContainer');
+    let scrollSpeed = 1; // Adjust speed here
+
+    function autoScroll() {
+        scrollContainer.scrollLeft += scrollSpeed;
+
+        // Reset scroll position for seamless loop
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+            scrollContainer.scrollLeft = 0;
+        }
+
+        requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();
+
+    // Optional: pause on hover
+    scrollContainer.addEventListener('mouseenter', () => scrollSpeed = 0);
+    scrollContainer.addEventListener('mouseleave', () => scrollSpeed = 1);
+});
 
 
 

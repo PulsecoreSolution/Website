@@ -1003,9 +1003,33 @@ h2 {
     display: inline-grid;
     width: 41%;
     margin: 0px 10px 12px 22px;
+    cursor: pointer;
+    overflow: hidden;
+    max-height: 122px;
+    /* collapsed height */
+    transition: max-height 0.4s ease;
 }
 
-.stat-number {
+.stat-box.expanded {
+    max-height: 500px;
+    /* expanded height (big enough for list) */
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.stat-box.expanded .project-list {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+JavaScri .stat-number {
     font-size: 4.8rem;
     font-weight: 700;
     color: #7bc4ff;

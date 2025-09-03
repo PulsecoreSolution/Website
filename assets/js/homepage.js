@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const section6 = document.getElementById('section6');
     const links = document.querySelectorAll('nav a[href^="#"]');
     const mobileMenu = document.getElementById('mobileMenu');
+    const statBoxes = document.querySelectorAll('.stat-box');
 
     // Toggle mobile nav
     if (toggleButton && mobileMenu) {
@@ -112,5 +113,11 @@ window.addEventListener('DOMContentLoaded', () => {
     scrollContainer.addEventListener('mouseleave', () => scrollSpeed = 1);
 });
 
-
+statBoxes.forEach(box => {
+    box.addEventListener('click', () => {
+        const isOpen = box.classList.contains('expanded');
+        statBoxes.forEach(b => b.classList.remove('expanded'));
+        if (!isOpen) box.classList.add('expanded');
+    });
+});
 
